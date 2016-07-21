@@ -1,32 +1,29 @@
 // (function () {
 	// "use strict";
 
-
-	//key: a value
-	//target: an array
+	/**
+	 * [binarysearch description]
+	 * @param  {[type]} key    [a key value you want to search]
+	 * @param  {[type]} target [an sorted rray]
+	 * @return {[type]}        [array index]
+	 */
 	function binarysearch(key, target){
-		// target.sort();
 		console.log(target);
-		var left = target[0];
-		var mid = Math.round(target.length/2);
-		var right = target[target.length-1];
-		console.log("left"+left);
-		console.log("right"+right);
+		var left = 0;
+		var mid = 0;
+		var right = target.length-1;
 		
 		while(left <= right){
-			// console.log("target[mid]"+target[mid]);
-			// console.log("key"+key);
+			mid = Math.round((left+right)/2);
 			if(target[mid] > key){
-				left = target[mid];
+				right = mid;
 			}
 			else if(target[mid] < key){
-				right = target[mid];
+				left = mid;
 			}
-			else if(target[mid] == key){
+			else if(target[mid] === key){
 				return mid;
 			}
-			// console.log("left"+left);
-			// console.log("right"+right);
 		}
 	}
 
