@@ -3,6 +3,7 @@
 <head>
 	<title></title>
 	<script type="text/javascript" src="search/binarysearch.js"></script>
+	<script type="text/javascript" src="sort/selectionsort.js"></script>
 </head>
 <body>
 <script type="text/javascript">
@@ -13,6 +14,9 @@
 
 	console.log("binarysearch, key index is: "+binarysearch.search(key, targetArray));
 
+	var unsortArray = [18,2,56,27,19,84,30,1,33];
+	console.log("before selectionsort: "+unsortArray);
+	console.log("after selectionsort: "+selectionsort.sort(unsortArray));
 
 </script>
 </body>
