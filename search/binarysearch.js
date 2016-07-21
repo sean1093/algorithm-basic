@@ -3,7 +3,9 @@
 
 	var binarysearch = {
 		/**
-		 * [search binarysearch]
+		 * [binarysearch]
+		 * checking the middle value and change right or left, until find the key
+		 * 
 		 * @param  {[type]} key    [a key value you want to search]
 		 * @param  {[type]} target [an sorted array]
 		 * @return {[type]}        [array index]
