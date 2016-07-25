@@ -6,7 +6,6 @@
 		 * [Bubble sort]
 		 * check all elment and put the smallest to the first.
 		 * 
-		 * @param  {[type]} key    [a key value you want to sort]
 		 * @param  {[type]} array [an array you want to sort]
 		 * @return {[type]}        [sorted array]
 		 */
@@ -31,9 +30,9 @@
 	};
 
 	var _swap = function(x, y, array){
-		var b = array[y];
+		var temp = array[y];
 		array[y] = array[x];
-		array[x] = b;
+		array[x] = temp;
 	};
 
 	if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
