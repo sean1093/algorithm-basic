@@ -4,26 +4,22 @@
 	var bubblesort = {
 		/**
 		 * [Bubble sort]
-		 * check all elment and put the smallest to the first.
+		 * check two elements from 0 to n and put large one to the left.
 		 * 
 		 * @param  {[type]} array [an array you want to sort]
 		 * @return {[type]}        [sorted array]
 		 */
 		sort: function(array) {
-			var min = 0;
-			var idx = 0;
-			for (var i = 0; i < array.length; i++) {
-      			idx = i;
-      			min = array[i];
+			var n = array.length;
 
-	      		for (var j = i+1; j < array.length; j++) {
-	      			if(array[j] < min ){
-	      				min = array[j];
-	      				idx = j;
-	      			}
-	      		}
-	      		_swap(i, idx, array);
-	      	}
+			for (var i = 0; i < n-1; i++) {
+				for (var j = 0; j<n-i-1; j++) {
+					if(array[j] > array[j+1]){
+						// console.log("swap: "+array[j]+", "+array[j+1]);
+						_swap(j, j+1, array);
+					}
+				}
+			}
 	      	return array;
 		}
 	    

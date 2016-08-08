@@ -4,6 +4,7 @@
 	<title></title>
 	<script type="text/javascript" src="search/binarysearch.js"></script>
 	<script type="text/javascript" src="sort/selectionsort.js"></script>
+	<script type="text/javascript" src="sort/bubblesort.js"></script>
 </head>
 <body>
 <script type="text/javascript">
@@ -16,7 +17,11 @@
 
 	var unsortArray = [18,2,56,27,19,84,30,1,33];
 	console.log("before selectionsort: "+unsortArray);
-	console.log("after selectionsort: "+selectionsort.sort(unsortArray));
+	console.log("after selectionsort:  "+selectionsort.sort(unsortArray));
+
+	var unsortArray2 = [18,2,56,27,19,84,30,1,33];
+	console.log("before bubblesort:    "+unsortArray2);
+	console.log("after bubblesort:     "+bubblesort.sort(unsortArray2));
 
 </script>
 </body>
