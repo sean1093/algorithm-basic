@@ -22,6 +22,20 @@
 		array[x] = temp;
 	};
 
+	var _insert = function(source, target, array){
+		var temp = array[source];
+		array.splice(target, 0, array[source]);
+
+		
+	};
+
+	// Array Remove - By John Resig (MIT Licensed)
+	// Array.prototype.remove = function(from, to) {
+	//   var rest = this.slice((to || from) + 1 || this.length);
+	//   this.length = from < 0 ? this.length + from : from;
+	//   return this.push.apply(this, rest);
+	// };
+
 	if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
     	module.exports = insertionsort;
  	else
