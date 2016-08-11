@@ -32,11 +32,11 @@
 	 * @return {[Array]}        [changed array]
 	 */
 	var _insert = function(source, target, array){
-		var temp = array[source];
-		
-		for (var i = target; i < source; i++) {
-			array[i+1] = array[i];
-		}
+		var temp = array[source];		
+		for(var i = source-1; i >= target; i--) {
+        	if(i<0){break;}
+        	array[i + 1] = array[i];
+    	}
 		array[target] = temp;
 
 		return array;
