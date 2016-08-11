@@ -4,13 +4,15 @@
 	var insertionsort = {
 		/**
 		 * [Insertion Sort]
-		 * check two elements from 0 to n and put large one to the left.
+		 * dev
 		 * 
 		 * @param  {[type]} array [an array you want to sort]
 		 * @return {[type]}        [sorted array]
 		 */
 		sort: function(array) {
 
+			array = _insert(5,3,array);
+				
 	      	return array;
 		}
 	    
@@ -22,19 +24,24 @@
 		array[x] = temp;
 	};
 
+	/**
+	 * [_insert insert source into target in array]
+	 * @param  {[Number]} source [source index]
+	 * @param  {[Number]} target [target index]
+	 * @param  {[Array]} array  [target array]
+	 * @return {[Array]}        [changed array]
+	 */
 	var _insert = function(source, target, array){
 		var temp = array[source];
-		array.splice(target, 0, array[source]);
-
 		
+		for (var i = target; i < source; i++) {
+			array[i+1] = array[i];
+		}
+		array[target] = temp;
+
+		return array;
 	};
 
-	// Array Remove - By John Resig (MIT Licensed)
-	// Array.prototype.remove = function(from, to) {
-	//   var rest = this.slice((to || from) + 1 || this.length);
-	//   this.length = from < 0 ? this.length + from : from;
-	//   return this.push.apply(this, rest);
-	// };
 
 	if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
     	module.exports = insertionsort;
