@@ -1,3 +1,3 @@
 # javascript-algorithm
- Different basic algorithms implement with JavaScript
+ Different basic algorithms implement with JavaScript.
 
