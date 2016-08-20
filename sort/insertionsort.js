@@ -1,48 +1,41 @@
 (function () {
 	"use strict";
+	//use basicTool.js
 
 	var insertionsort = {
 		/**
 		 * [Insertion Sort]
-		 * dev
+		 * dev not finished
 		 * 
 		 * @param  {[type]} array [an array you want to sort]
 		 * @return {[type]}        [sorted array]
 		 */
 		sort: function(array) {
+			//basicTool.insert
+			var t = 1;
+			for(var i = 1; i<array.length; i++){
+				console.log("i: "+i);
+				for (var j = 0; j<i; i++) {
+					console.log("j: "+i);
+					if(array[i] < array[j]){
+						Debug;
+						
+						console.log("be array: "+array);
+						console.log("change: "+array[i]+"|"+array[j]);
+						array = basicTool.insert(i,j,array);
+						console.log("af array: "+array);
+						
+					}
+				}
 
-			for(var i=0; i<array.length; i++){
-
-				
-				// _insert(5,3,array);
 			}
-			// _insert(5,3,array);
+
 				
 	      	return array;
 		}
 	    
 	};
 
-	var _swap = function(x, y, array){
-		var temp = array[y];
-		array[y] = array[x];
-		array[x] = temp;
-	};
-
-	/**
-	 * [_insert insert source into target in array]
-	 * @param  {[Number]} source [source index]
-	 * @param  {[Number]} target [target index]
-	 * @param  {[Array]} array  [target array]
-	 */
-	var _insert = function(source, target, array){
-		var temp = array[source];		
-		for(var i = source-1; i >= target; i--) {
-        	if(i<0){break;}
-        	array[i + 1] = array[i];
-    	}
-		array[target] = temp;
-	};
 
 
 	if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
