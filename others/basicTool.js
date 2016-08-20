@@ -18,14 +18,18 @@
 	 * @param  {[Array]} array  [target array]
 	 */
 	basicTool.insert = function(source, target, array){
-		var tempArray = [];
-
-
-		var temp = array[source];		
-		for(var i = source-1; i >= target; i--) {
-        	if(i<0){break;}
-        	array[i + 1] = array[i];
-    	}
+		var temp = array[source];
+		if(source>target){
+			for(var i = source-1; i >= target; i--) {
+	        	if(i<0){break;}
+	        	array[i + 1] = array[i];
+	    	}
+		}
+		else{
+	    	for(var j = source; j <target; j++) {
+	        	array[j] = array[j+1];
+	    	}			
+		}	
 		array[target] = temp;
 		return array;
 	};
