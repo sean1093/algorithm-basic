@@ -3,6 +3,13 @@
 
 	var basicTool = {};
 
+	/**
+	 * [swap swap two elements in array]
+	 * @param  {[Number]} x     [elements]
+	 * @param  {[Number]} y     [elements]
+	 * @param  {[array]} array [target array]
+	 * @return {[array]}       [array]
+	 */
 	basicTool.swap = function(x, y, array){
 		var temp = array[y];
 		array[y] = array[x];
@@ -12,10 +19,10 @@
 
 	/**
 	 * [insert insert source into target location in array]
-	 * 
 	 * @param  {[Number]} source [source index]
 	 * @param  {[Number]} target [target index]
 	 * @param  {[Array]} array  [target array]
+	 * @return {[array]}       [array]
 	 */
 	basicTool.insert = function(source, target, array){
 		var temp = array[source];
