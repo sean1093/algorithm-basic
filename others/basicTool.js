@@ -7,21 +7,27 @@
 		var temp = array[y];
 		array[y] = array[x];
 		array[x] = temp;
+		return array;
 	};
 
 	/**
-	 * [_insert insert source into target in array]
+	 * [insert insert source into target location in array]
+	 * 
 	 * @param  {[Number]} source [source index]
 	 * @param  {[Number]} target [target index]
 	 * @param  {[Array]} array  [target array]
 	 */
 	basicTool.insert = function(source, target, array){
+		var tempArray = [];
+
+
 		var temp = array[source];		
 		for(var i = source-1; i >= target; i--) {
         	if(i<0){break;}
         	array[i + 1] = array[i];
     	}
 		array[target] = temp;
+		return array;
 	};
 
 

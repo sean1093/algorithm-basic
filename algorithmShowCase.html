@@ -6,6 +6,8 @@
 	<script type="text/javascript" src="sort/selectionsort.js"></script>
 	<script type="text/javascript" src="sort/bubblesort.js"></script>
 	<script type="text/javascript" src="sort/insertionsort.js"></script>
+
+	<script type="text/javascript" src="others/basicTool.js"></script>
 </head>
 <body>
 <script type="text/javascript">
@@ -28,6 +30,12 @@
 	var unsortArray3 = [18,2,56,27,19,84,30,1,33];
 	console.log("before insertionsort:    "+unsortArray3);
 	console.log("after insertionsort:     "+insertionsort.sort(unsortArray3));
+
+
+	var unsortArrayToolTest = [18,2,56,27,19,84,30,1,33];
+	console.log("swap:     "+basicTool.swap(7,4,unsortArrayToolTest));
+	console.log("insert:     "+basicTool.insert(7,3,unsortArrayToolTest));
+	
 
 </script>
 </body>
