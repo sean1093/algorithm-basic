@@ -13,19 +13,27 @@
 		sort: function(array) {
 			//basicTool.insert
 			for(var i = 1; i<array.length; i++){
-				console.log("i: "+i);
+				console.log("--i--: "+i);
 				var value = array[i];
-				for (var j = i-1; j>0; j--) {
+				var target = i;
+				for (var j = i-1; j>=0; j--) {
 					console.log("j: "+j);
+					console.log("array[j]|array[j+1]: "+array[j]+"|"+array[j+1]);
 					if(array[j]>array[j+1]){
 						array[j+1] = array[j];
+						console.log("now: "+array);
 					}
 					else{
+						target = j;
+						console.log("break");
 						break;
 					}
 						
 				}
-				array[j] = value;
+				console.log("value: "+value);
+				console.log("target: "+target);
+				array[target] = value;
+				console.log("round end: "+array);
 					
 
 			}
