@@ -12,24 +12,23 @@
 		 */
 		sort: function(array) {
 			//basicTool.insert
-			var t = 1;
 			for(var i = 1; i<array.length; i++){
 				console.log("i: "+i);
-				for (var j = 0; j<i; i++) {
-					console.log("j: "+i);
-					if(array[i] < array[j]){
-						Debug;
-						
-						console.log("be array: "+array);
-						console.log("change: "+array[i]+"|"+array[j]);
-						array = basicTool.insert(i,j,array);
-						console.log("af array: "+array);
-						
+				var value = array[i];
+				for (var j = i-1; j>0; j--) {
+					console.log("j: "+j);
+					if(array[j]>array[j+1]){
+						array[j+1] = array[j];
 					}
+					else{
+						break;
+					}
+						
 				}
+				array[j] = value;
+					
 
 			}
-
 				
 	      	return array;
 		}
