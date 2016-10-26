@@ -14,22 +14,24 @@
 	
 	// binarysearch
 	var targetArray = [1,2,5,7,19,24,30,41,45];
-	var key = 30;
 
-	console.log("binarysearch, key index is: "+binarysearch.search(key, targetArray));
+	console.log("binarysearch, 30 index is: "+binarysearch.search(30, targetArray)); //6
+	console.log("binarysearch, 1 index is: "+binarysearch.search(1, targetArray)); //0
+	console.log("binarysearch, 45 index is: "+binarysearch.search(45, targetArray)); //8
+	console.log("binarysearch, 26 index is: "+binarysearch.search(26, targetArray)); //null
 
 	var unsortArray = [18,2,56,27,19,84,30,1,33];
 	console.log("before selectionsort: "+unsortArray);
 	console.log("after selectionsort:  "+selectionsort.sort(unsortArray));
 
-	var unsortArray2 = [18,2,56,27,19,84,30,1,33];
-	console.log("before bubblesort:    "+unsortArray2);
-	console.log("after bubblesort:     "+bubblesort.sort(unsortArray2));
+	// var unsortArray2 = [18,2,56,27,19,84,30,1,33];
+	// console.log("before bubblesort:    "+unsortArray2);
+	// console.log("after bubblesort:     "+bubblesort.sort(unsortArray2));
 
 	//insertionsort dev
-	var unsortArray3 = [18,2,56,27,19,84,30,1,33];
-	console.log("before insertionsort:    "+unsortArray3);
-	console.log("after insertionsort:     "+insertionsort.sort(unsortArray3));
+	// var unsortArray3 = [18,2,56,27,19,84,30,1,33];
+	// console.log("before insertionsort:    "+unsortArray3);
+	// console.log("after insertionsort:     "+insertionsort.sort(unsortArray3));
 
 
 

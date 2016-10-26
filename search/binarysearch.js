@@ -14,19 +14,20 @@
 	      	var left = 0;
 			var mid = 0;
 			var right = target.length-1;
-			
+
 			while(left <= right){
 				mid = Math.round((left+right)/2);
 				if(target[mid] > key){
-					right = mid;
+					right = mid - 1;
 				}
 				else if(target[mid] < key){
-					left = mid;
+					left = mid + 1;
 				}
 				else if(target[mid] === key){
 					return mid;
 				}
 			}
+			return null; //not found
 		}
 	    
 	};
