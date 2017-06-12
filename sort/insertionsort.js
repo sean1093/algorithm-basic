@@ -4,6 +4,7 @@
     var insertionsort = {
         /**
          * [Insertion Sort]
+         * put ith data to 0~i-1 sorted array
          * 
          * @param  {[type]} array [an array you want to sort]
          * @return {[type]}        [sorted array]
