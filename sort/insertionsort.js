@@ -1,52 +1,29 @@
 (function () {
-	"use strict";
-	//use basicTool.js
+    "use strict";
 
-	var insertionsort = {
-		/**
-		 * [Insertion Sort]
-		 * dev not finished
-		 * 
-		 * @param  {[type]} array [an array you want to sort]
-		 * @return {[type]}        [sorted array]
-		 */
-		sort: function(array) {
-			//basicTool.insert
-			for(var i = 1; i<array.length; i++){
-				console.log("--i--: "+i);
-				var value = array[i];
-				var target = i;
-				for (var j = i-1; j>=0; j--) {
-					console.log("j: "+j);
-					console.log("array[j]|array[j+1]: "+array[j]+"|"+array[j+1]);
-					if(array[j]>array[j+1]){
-						array[j+1] = array[j];
-						console.log("now: "+array);
-					}
-					else{
-						target = j;
-						console.log("break");
-						break;
-					}
-						
-				}
-				console.log("value: "+value);
-				console.log("target: "+target);
-				array[target] = value;
-				console.log("round end: "+array);
-					
+    var insertionsort = {
+        /**
+         * [Insertion Sort]
+         * 
+         * @param  {[type]} array [an array you want to sort]
+         * @return {[type]}        [sorted array]
+         */
+        sort: function(array) {
 
-			}
-				
-	      	return array;
-		}
-	    
-	};
-
-
-
-	if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
-    	module.exports = insertionsort;
- 	else
-    	window.insertionsort = insertionsort;
+            for(var i = 1; i<array.length; i++) {
+                for (var j = i; j>0; j--) {
+                    if(array[j] < array[j-1]) {
+                        var temp = array[j];
+                        array[j] = array[j-1];
+                        array[j-1] = temp;
+                    }
+                }
+            }
+            return array;
+        }       
+    };
+    if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
+        module.exports = insertionsort;
+    else
+        window.insertionsort = insertionsort;
 })();
