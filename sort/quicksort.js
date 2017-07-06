@@ -20,38 +20,36 @@
                 if(left < right) {
                     var i = left;
                     var j = right;
+                    // 先將第一個當成pivot
                     var pivot = array[i];
                     var length = array.length;
-                    var count = 0;
-                    // 先將第一個當成pivot
-                    while(i<j) {
+
+                    while(true) {
+
                         // 從頭(left)開始找第一個大於pivot值的位置i
-                        while(i < length && i < pivot) {
+                        while(i < length-1 && array[i] <= pivot) {
                             i++;
-
-
-                            count++;
-                            if(count > 100){break;}
                         }
 
                         // 從尾(right)開始找第一個小於pivot值的位置j
-                        while(j > left && j > pivot) {
+                        while(j >= left && array[j] > pivot) {
                             j--;
-
-
-                            count++;
-                            if(count > 100){break;}
                         }
 
+                        // 假如i超過j了就要結束這回合
+                        if(i>=j) {
+                            break;
+                        }
 
-                        count++;
-                        if(count > 100){break;}
-
-
+                        // 移動i,j的元素
                         _swap(i, j, array);
+
                     }
-                    _swap(left, j, array); 
-                    quickSort(array, left, j-1);   
+                    // 最後將pivot換到中間
+                    _swap(left, j, array);
+                    // 對左半邊繼續排 
+                    quickSort(array, left, j-1); 
+                    // 對右半邊繼續排  
                     quickSort(array, j+1, right);                  
                 }
                 
