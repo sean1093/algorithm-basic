@@ -5,7 +5,7 @@
         /**
          * [Selection sort]
          * check all elment and put the smallest to the first.
-         * 把第i筆資料插入前面(i-1)筆已經排序好的陣列中
+         * 每次從第i到n筆中挑出最小值，和前面第i筆交換
          * 
          * @param  {[type]} array [an array you want to sort]
          * @return {[type]}       [sorted array]
