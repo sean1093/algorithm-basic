@@ -99,4 +99,3 @@ function selectionsort(array) {
 
 找出一個 pivot (p)，每回合比較把小的放 p 左邊，大的放 p 右邊，做完之後分兩邊繼續做(divide and conquer)
 
-<script src="https://gist.github.com/sean1093/5e3b123c20b91e2f4ce8729f871c20ae.js"></script>
